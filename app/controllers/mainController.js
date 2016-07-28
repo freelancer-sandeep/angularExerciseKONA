@@ -11,6 +11,9 @@ app.factory('EmployeesService',function($http){
     };
 })
 
+app.controller('AddEmployeeController', function ($scope) {
+console.log("Add Employee Controller");
+})
 
 app.controller('MainController', function ($scope, EmployeesService) {
     // Getting all the Employees List

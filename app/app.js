@@ -15,5 +15,10 @@ app.config(function ($routeProvider) {
             templateUrl: "templates/listemployee.html",
             controller: "MainController"
         });
+       $routeProvider.when('/add_employee', { 
+            templateUrl: "templates/addEmployee.html",
+            controller: "AddEmployeeController"
+        });  
+        
     $routeProvider.when('/about', {templateUrl: "templates/about.html"});
 });
