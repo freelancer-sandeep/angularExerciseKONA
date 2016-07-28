@@ -1,9 +1,17 @@
-<input type="search" class="form-control app-search" ng-model="filter.value" ng-keypress="search($event)"
+<input type="search" class="form-control app-search" ng-model="value" ng-keypress="search($event)"
        placeholder="Search.."/>
 
 <div class="scrollable">
+    
     <div class="scrollable-content">
+        <h1 ng-if='loadingEmployees'>Loading Employees..</h1>
         <!-- Add the cards here -->
+        <div class="list-group">
+            <a href="" class="list-group-item" ng-repeat='employee in employees | filter:value'>
+                {{employee.first}} {{employee.last}}
+            </a>
+        </div>
+        
     </div>
 </div>
 
